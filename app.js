@@ -67,11 +67,11 @@ app.post("/login", async (request, response) => {
       databaseUser.password
     );
     if (isPasswordMatched === true) {
-      const response = {
+      const data = {
         jwt_token:
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
       };
-      response.send(response);
+      response.send(data);
     } else {
       response.status(400);
       response.send("Invalid password");
