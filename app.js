@@ -32,6 +32,7 @@ initializeDbAndServer();
 
 app.post("/register/", async (request, response) => {
   const { username, password } = request.body;
+  console.log("------------", username, password);
   const getUserQuery = `
       SELECT * FROM user WHERE username = '${username}';
     `;
